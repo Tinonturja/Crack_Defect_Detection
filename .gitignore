@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+
+# Data & large artifacts — see README for how to obtain the dataset
+resources/data/
+*.pth
+*.pt
+
+# results/*.png and results/*.json ARE committed on purpose — they're the
+# evidence behind the numbers in the README, and they're small.
