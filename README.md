@@ -37,6 +37,20 @@ Held-out validation set (8,000 images), full classification report:
 
 ![Confusion matrix](results/confusion_matrix.png)
 
+### Example predictions
+
+![Example predictions](assets/prediction_examples.png)
+
+Six real inferences from `results/model.pth`, run with
+`scripts/make_prediction_demo.py` — actual model output on actual images,
+not mockups. These are sampled randomly from the full dataset (not
+restricted to the validation split), with the true label, predicted label,
+and confidence shown for each. Regenerate with:
+
+```bash
+python scripts/make_prediction_demo.py
+```
+
 This dataset is known to be easily separable (surface cracks are visually
 distinct at this resolution, and it's a widely-used introductory computer
 vision benchmark), which is why accuracy is this high with a fairly small
@@ -90,6 +104,8 @@ resources/data/Negative/*.jpg
 │   └── utils.py       # seeding, device selection, checkpoint I/O, plotting
 ├── tests/               # unit tests (synthetic data, no dataset download required)
 ├── notebooks/           # original exploratory notebook, kept for provenance
+├── scripts/             # make_prediction_demo.py — regenerates assets/prediction_examples.png
+├── assets/               # demo images referenced in this README
 └── results/             # training history, curves, confusion matrix, report
 ```
 
